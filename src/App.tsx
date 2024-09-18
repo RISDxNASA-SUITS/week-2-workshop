@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import {Button, Grid, Grid2, Stack, Typography} from "@mui/material";
+import {Button,  Grid2, Stack, Typography} from "@mui/material";
 const NASAKEY = "DLpRBjeS1RyKLlH3yEi7fzvsUXA7royVNOXxdgaA"
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +12,7 @@ function App() {
         const fetchData = async () => {
             const data = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASAKEY}&count=4`)
             if (!data.ok){
-                console.log(await data.json())
+                alert("SOMETHING WENT WRONG WITH THE API CALL")
             }
             const json = await data.json()
             const tempImg = []
