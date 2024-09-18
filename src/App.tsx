@@ -33,8 +33,8 @@ function App() {
                   return <Grid2 sx={{border:"1px solid grey", borderRadius:4, display:"flex", justifyContent:"center", alignItems:"center"}}>
                       <Stack spacing={2} sx={{display:"flex", justifyContent:"center", alignItems:"center" }} >
 
-                          <img src={elt} alt={captions[i]} height={'82%'} width={'40%'}/>
-                          <Typography> {captions[i]}</Typography>
+                          <img src={elt} alt={captions[i]} height={'300px'} width={'auto'}/>
+                          <Typography sx={{width:"600px", height:"100px", overflow:"scroll"}}> {captions[i]}</Typography>
                       </Stack>
                       </Grid2>
 
